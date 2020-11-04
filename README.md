@@ -18,6 +18,8 @@
 - GIT
 - Vercel
 
+[Click here to access the project](https://rest-countries-api-with-color-theme-switcher-master-one.vercel.app/)
+
 ## Frontend Mentor - REST Countries API with color theme switcher
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
