@@ -10,6 +10,9 @@
   - Sass
   - Custom properties (CSS variables)
   - CSS animations (keyfranes)
+  - CSS Grid Layout and Flexbox
+  - No CSS framework used
+  - Mobile First
 - Gulp
 - Webpack
 - GIT
