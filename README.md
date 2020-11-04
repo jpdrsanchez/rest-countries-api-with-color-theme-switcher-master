@@ -3,7 +3,7 @@
 - HTML
 - Vanilla Javascript
   - Fetch API
-  - Async/Await
+  - Async/Await/Promises
   - Arrow Functions
   - Native Darkmode
 - CSS
