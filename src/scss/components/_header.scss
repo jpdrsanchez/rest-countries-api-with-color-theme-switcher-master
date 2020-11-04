@@ -1,0 +1,21 @@
+.header {
+  background-color: var(--element-color);
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  box-shadow: var(--main-shadow);
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-size: 1rem;
+    font-weight: 800;
+
+    @media (min-width: 700px) {
+      font-size: 1.5rem;
+    }
+  }
+}

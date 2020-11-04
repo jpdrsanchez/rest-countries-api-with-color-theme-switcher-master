@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REST Countries API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./dist/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="header-title">Where in the world?</h1>
+      <a href="#" class="mode-switcher" data-mode="swithcer">
+        <i class="far fa-moon"></i> Dark Mode
+      </a>
+    </div>
+  </header>
+
+  <section data-page="details" class="details">
+    <div class="container details-container">
+      <button class="details-button" data-details="back">
+        <i class="fas fa-long-arrow-alt-left"></i>
+        Back
+      </button>
+      <img data-details="image" class="details-image" src="https://picsum.photos/600/400" alt="No Image">
+      <div class="details-information">
+        <h1 data-details="title" class="details-title">No title</h1>
+        <ul class="details-list">
+          <li class="details-item">
+            <span>Native Name: </span><span data-details="nativeName">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Population: </span><span data-details="population">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Region: </span><span data-details="region">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Sub Region: </span><span data-details="subregion">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Capital: </span><span data-details="capital">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Top Level Domain: </span><span data-details="topLevelDomain">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Currencies: </span><span data-details="currencies">No data</span>
+          </li>
+          <li class="details-item">
+            <span>Languages: </span><span data-details="languages">No data</span>
+          </li>
+        </ul>
+        <div class="details-wrapper-borders">
+          <span>Border Countries: </span>
+          <ul class="details-borders" data-details="borders">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters" data-page="home">
+    <form class="container filters-form" action="#" data-fetch="form">
+      <input class="filters-text-search" type="text" name="text-search" id="text-search" placeholder="Search for a country..." autocomplete="off" autocapitalize="off" spellcheck="false" autocorrect="off" data-fetch="search-text" data-mode="dark">
+      <div class="filters-region-wrapper">
+        <div class="filters-region-search" data-dropdown="click">
+          <span>Filter by Region</span>
+          <i class="fas fa-angle-down"></i>
+        </div>
+        <ul class="filters-region-list" data-dropdown="body">
+          <li class="filters-region-item">Africa</li>
+          <li class="filters-region-item">Americas</li>
+          <li class="filters-region-item">Asia</li>
+          <li class="filters-region-item">Europe</li>
+          <li class="filters-region-item">Oceania</li>
+        </ul>
+      </div>
+    </form>
+  </section>
+
+  <section class="countries" data-page="home">
+    <ul class="container countries-list" data-fetch="container">
+
+    </ul>
+  </section>
+  <section class="loading" data-loading>
+    <div class="loading-spinner"></div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-copy">Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div class="container footer-author">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/jpdrsanchez/">João Pedro</a>.</div>
+  </footer>
+  <script src="./dist/js/script.js"></script>
+</body>
+
+</html>
