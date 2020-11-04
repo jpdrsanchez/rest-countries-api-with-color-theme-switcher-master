@@ -1,4 +1,4 @@
-# Frontend Mentor - REST Countries API with color theme switcher
+# Stack used in this challenge
 
 - HTML
 - Vanilla Javascript
