@@ -1,8 +1,13 @@
-export default class Mode {
+export default class DarkMode {
   constructor(switcher, darkModeClass, elements) {
-    this.switcher = document.querySelector(switcher);
+    // Element that will switch between darkmode and lightmode
+    this.switch = document.querySelector(switcher);
+    // Elements affected when we change the switch
     this.elements = document.querySelectorAll(elements);
-    this.darkModeClass = darkModeClass;
+    // Class that will be added in the elements affected by the darkmode or lightmode
+    this.darkModeClass =
+      darkModeClass === undefined ? 'dark-mode' : darkModeClass;
+
     this.switchTheme = this.switchTheme.bind(this);
     this.init();
   }
@@ -21,7 +26,7 @@ export default class Mode {
       this.elements.forEach((element) =>
         element.classList.add(this.darkModeClass),
       );
-      this.switcher.firstElementChild.className = 'fas fa-moon';
+      this.switch.firstElementChild.className = 'fas fa-moon';
     }
     return this;
   }
@@ -32,20 +37,22 @@ export default class Mode {
       element.classList.toggle(this.darkModeClass),
     );
     localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
-    this.switcher.firstElementChild.className =
+    this.switch.firstElementChild.className =
       localStorage.theme === 'dark' ? 'fas fa-moon' : 'far fa-moon';
     return this;
   }
 
-  addClickEvents() {
-    this.switcher.addEventListener('click', this.switchTheme);
+  addEvents() {
+    this.switch.addEventListener('click', this.switchTheme);
     return this;
   }
 
   init() {
-    this.setLocalStorage();
-    this.setDefaultTheme();
-    this.addClickEvents();
+    if (this.switch && this.elements.length) {
+      this.setLocalStorage();
+      this.setDefaultTheme();
+      this.addEvents();
+    }
     return this;
   }
 }
