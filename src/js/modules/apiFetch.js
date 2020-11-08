@@ -22,7 +22,8 @@ export default class ApiFetch {
   }
 
   showResponseAsJson() {
-    this.json = JSON.parse(sessionStorage.countriesJson);
+    if (sessionStorage.countriesJson)
+      this.json = JSON.parse(sessionStorage.countriesJson);
     return this.json;
   }
 

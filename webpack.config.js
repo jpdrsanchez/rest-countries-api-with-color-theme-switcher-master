@@ -6,5 +6,5 @@ module.exports = {
     path: path.resolve(__dirname, './'),
     filename: 'script.js',
   },
-  mode: 'development',
+  mode: 'production',
 };
