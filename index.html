@@ -10,10 +10,12 @@
   <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 
-<body style="height: 600vh">
+<body>
   <header class="header">
     <div class="container header-container">
-      <h1 class="header-title">Where in the world?</h1>
+      <h1 class="header-title">
+        <a href="#" data-home>Where in the world?</a>
+      </h1>
       <a href="#" class="mode-switcher" data-mode="switch">
         <i class="far fa-moon"></i> Dark Mode
       </a>
@@ -22,7 +24,7 @@
 
   <section data-page="details" class="details">
     <div class="container details-container">
-      <button class="details-button" data-details="back">
+      <button class="details-button" data-home>
         <i class="fas fa-long-arrow-alt-left"></i>
         Back
       </button>
@@ -74,11 +76,11 @@
           <i class="fas fa-angle-down"></i>
         </div>
         <ul class="filters-region-list" data-dropdown="body">
-          <li class="filters-region-item">Africa</li>
-          <li class="filters-region-item">Americas</li>
-          <li class="filters-region-item">Asia</li>
-          <li class="filters-region-item">Europe</li>
-          <li class="filters-region-item">Oceania</li>
+          <li class="filters-region-item" data-fetch="region">Africa</li>
+          <li class="filters-region-item" data-fetch="region">Americas</li>
+          <li class="filters-region-item" data-fetch="region">Asia</li>
+          <li class="filters-region-item" data-fetch="region">Europe</li>
+          <li class="filters-region-item" data-fetch="region">Oceania</li>
         </ul>
       </div>
     </form>

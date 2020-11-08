@@ -80,3 +80,14 @@ body {
     display: none;
   }
 }
+
+[data-scroll] {
+  opacity: 1;
+  transform: scale(0);
+  transition: opacity 0.1s, transform 0.2s;
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
