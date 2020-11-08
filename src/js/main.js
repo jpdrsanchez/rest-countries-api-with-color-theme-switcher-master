@@ -43,6 +43,7 @@ const callHomePage = () => {
 
   const handleCallHome = (event) => {
     event.preventDefault();
+    document.title = 'REST Countries API';
     homePageItems.forEach((item) => {
       if (item.classList.contains('hide')) item.classList.remove('hide');
     });

@@ -74,6 +74,7 @@ export default class ApiFetch {
   }
 
   fillDetailsPage([countrie]) {
+    document.title = countrie.name;
     const {
       image,
       name,
